@@ -1,21 +1,34 @@
-let miejsca = document.querySelectorAll("td");
-var kliniete;
-window.onload = function(){
-    miejsca.forEach(function(pole){
-        pole.addEventListener("click", function(){
-            wstaw(pole);
-            klikniete = true;
-            if(klikniete == true){
-                pole.style.backgroundColor="yellow";
-                klikniete = false;
-            }           
-            else if(klikniete == false){
-                pole.style.backgroundColor="white";
-            } 
-        })
-    })
-}
-function wstaw(pole){
-    let nowa = prompt("Podaj nową wartość");
-    pole.innerHTML = nowa;
-}
+var suma = 0;
+var ilosc = 0;
+	function zmiana(komorka) {
+		if (komorka.style.backgroundColor === "lightyellow") 
+        {
+			suma -= parseInt(komorka.innerText);
+            ilosc -= 1;
+			komorka.innerText = "";
+			komorka.style.backgroundColor = "#FFBFA9";
+		} 
+        else 
+        {
+            var nowa = prompt("Podaj wartość");
+            komorka.innerText = nowa;
+			suma += parseInt(komorka.innerText);
+            ilosc += 1;
+			komorka.style.backgroundColor = "lightyellow";
+		}
+	}
+	function sumowanie() 
+    {
+		alert("Suma klikniętych komórek wynosi " + suma);
+	}
+    function sredniaa()
+    {
+        var srednia = suma/ilosc;
+        alert("Średnia klikniętych komórek wynosi " + srednia);
+    }
+    var miejsca = document.querySelectorAll('td');
+    miejsca.forEach(miejsce => {
+        miejsce.addEventListener('click', function() {
+            zmiana(this);
+        });
+    });
