@@ -1,9 +1,28 @@
 body{
     font-family: Verdana;
+    background-color: #FFACAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tabelka{
+    width: 700px;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border-color: #FFBFA9;
+    background-color: #FFBFA9;
+    border-style: solid;
 }
 header{
-    text-align: center;
     font-size: 40px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 td{
     border-width: 2px;
@@ -28,4 +47,21 @@ th{
     width: 100px;
     height: 50px;
     font-size: 20px;
+}
+.przyciski{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    padding: 30px;
+    margin: 10px;
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: #FFEBB4;
+    font-size: 20px;
+}
+button:hover{
+    background-color: #FBFFB1;
 }
