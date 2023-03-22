@@ -18,11 +18,16 @@ body{
     border-style: solid;
 }
 header{
-    font-size: 40px;
+    font-size: 32px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 1px rgb(126, 18, 18);
+    background-color: #FFBFA9;
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 td{
     border-width: 2px;
@@ -59,9 +64,12 @@ button{
     border-width: 2px;
     border-radius: 15px;
     border-style: solid;
+    border-color: #FFEBB4;
     background-color: #FFEBB4;
     font-size: 20px;
+    box-shadow: 5px 5px 1px lightyellow;
 }
 button:hover{
     background-color: #FBFFB1;
+    border-color: #FBFFB1;
 }
